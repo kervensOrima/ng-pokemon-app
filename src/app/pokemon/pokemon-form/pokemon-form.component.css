@@ -1,0 +1,22 @@
+
+form {
+    width:70%;
+    margin:20px  auto;
+    padding: 10px;
+    box-shadow: lightblue 1px 1px 10px;
+}
+
+input {
+    width: 480px;
+    padding: 10px;
+}
+
+.button {
+    margin: 5px;
+    padding: 8px;
+    background: rgb(64, 64, 223);
+    border:none;
+    border-radius:2px;
+    color: white;
+    cursor:pointer;
+}

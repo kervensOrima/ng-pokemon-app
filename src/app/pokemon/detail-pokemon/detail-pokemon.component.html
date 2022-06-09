@@ -1,0 +1,44 @@
+<h1>Detail pokemon</h1>
+
+<h3>{{ pokemon?.name }}</h3>
+<div class="detail" *ngIf="pokemon" appBorderCard="{{ pokemon.color }}">
+    <div class="pokemon-image">
+        <img [src]="pokemon?.picture" />
+    </div>
+
+    <div class="pokemon-detail">
+
+        <table>
+            <tr>
+                <td><strong>Nom</strong></td>
+                <td>{{ pokemon?.name }} </td>
+            </tr>
+            <tr>
+                <td><strong>Point de vie</strong></td>
+                <td>{{ pokemon?.hp }} </td>
+            </tr>
+            <tr>
+                <td><strong>Degats</strong></td>
+                <td>{{ pokemon?.cp }} </td>
+            </tr>
+            <tr>
+                <td><strong>Types</strong></td>
+                <td>
+                    <span class="types" *ngFor="let type of pokemon?.types"> {{ type }} </span>
+               </td>
+            </tr>
+            <tr>
+                <td><strong>Date de creation</strong></td>
+                <td>{{ pokemon?.created | date : 'dd MMMM YYYY' }} </td>
+            </tr>
+        </table>
+
+        <hr/>
+        <button routerLink='/pokemons'>Retour</button>
+        <!-- <button [routerLink]="'/edit/pokemon/'+ pokemon.id "> {{ pokemon.id }} edit</button> -->
+        <button (click)="goToPokemon(pokemon.id)" > {{ pokemon.id }} edit</button>
+    </div>
+</div>
+<ng-container style="margin:100px  auto; width:50%;" *ngIf="!pokemon">
+    <app-loader></app-loader>
+</ng-container>

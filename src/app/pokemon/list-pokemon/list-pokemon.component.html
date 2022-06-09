@@ -1,0 +1,32 @@
+
+<h1>Liste de pokemon</h1>
+<div class="box-pokemon">
+    <div class="content" *ngFor="let item of pokemonList" >
+       <div (click)="detail(item.id)" class="image-texte" appBorderCard="{{item.color}}">
+            <div class="image">
+                <img [src]="item?.picture" />
+            </div>
+            <div class="texte">
+                <h3>  {{ item?.name }} </h3>
+                <p>Le {{ item?.created  | date : 'dd MMMM YYYY' | uppercase }} </p>
+                <br/>
+                <div class="button-group">
+                    <span *ngFor="let type of item?.types"  >
+                            {{ type  }}
+                    </span>
+                        <!-- <button>{{ text }}</button> -->
+                        <button (click)="detail(item.id)" class="voir">
+                            Detail
+                        </button> 
+                        
+                        <button class="delete" (click)="onDeleteById(item.id)" >
+                            supprimer
+                        </button>
+                </div>
+            </div>
+       </div>
+    </div>
+</div>
+<a routerLink="/pokemon/add" style="text-align: center; padding: 8px; text-decoration:none">ajouter un nouveau pokemon</a>
+
+<app-loader style="margin:100px auto;width:auto; border: 1px solid black;" *ngIf="!pokemonList"></app-loader>

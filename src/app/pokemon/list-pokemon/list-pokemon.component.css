@@ -1,0 +1,78 @@
+* , body , app-root {
+    margin: 0;
+    padding:0 ;
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+}
+
+.delete{
+    background: rgb(245, 45, 45);
+    color: white;
+    border: none;
+}
+.box-pokemon {
+    width: 95%;
+    height: auto;
+    padding: 2px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.box-pokemon .content{
+    width:33%;
+    height: 170px;
+    box-shadow: rgb(14, 13, 13) 1px 1px 4px;
+    margin-top: 14px ;
+    padding: 2px;
+    border-radius:3px;
+}
+.image-texte {
+    height: 170px;
+}
+
+.box-pokemon .content .image-texte {
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.box-pokemon .content .image-texte .image {
+    width: 30%;
+    height: auto;
+    margin-top: 18px;
+}
+.box-pokemon .content .image-texte .image img{
+    width: 100%;
+    height: 100%;
+}
+
+.box-pokemon .content .image-texte .texte{
+    width:70%;
+    height: auto;
+    text-align: center;
+    word-wrap: normal;
+    word-break: normal;
+    margin-top:4px;
+}
+
+.texte .button-group {
+    align-items: center;
+    margin:2px;
+}
+.texte .button-group button {
+    padding: 6px;
+    border: none;
+    margin:2px;
+    cursor: pointer;
+}
+
+.voir{
+    background: rgb(73, 73, 189);padding: 10px;color:white;border-radius: 5px;
+}
